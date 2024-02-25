@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.traffic-light {
+  background-color: #222;
+  border-radius: 20px;
+  width: 150px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.light {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.red {
+  background-color: red;
+  animation: red-light 3s ease-in-out infinite alternate;
+}
+
+.yellow {
+  background-color: yellow;
+  animation: yellow-light 3s ease-in-out infinite alternate;
+}
+
+.green {
+  background-color: green;
+  animation: green-light 3s ease-in-out infinite alternate;
+}
+
+@keyframes red-light {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes yellow-light {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes green-light {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
